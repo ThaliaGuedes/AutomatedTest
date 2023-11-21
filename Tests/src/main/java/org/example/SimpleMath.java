@@ -8,6 +8,9 @@ public class SimpleMath {
         return firstNumber - secondNumber;
     }
     public Double division(Double firstNumber, Double secondNumber){
+        if (secondNumber == 0) {
+            throw new ArithmeticException("Divisão por zero não é permitida!");
+        }
         return firstNumber / secondNumber;
     }
     public Double multiplication(Double firtsNumber, Double secondNumber){
