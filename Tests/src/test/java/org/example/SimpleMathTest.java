@@ -1,5 +1,6 @@
 package org.example;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -69,4 +70,17 @@ class SimpleMathTest {
                 + firstNumber + "+" + secondNumber + ")/2"
                 + "did not producer");
     }
+    @Test
+    @DisplayName("Test division by zero")
+    void testDivisaoPorZero(){
+        SimpleMath math = new SimpleMath();
+
+        double firstNumber = 10D;
+        double secondNumber = 0D;
+
+        assertThrows(ArithmeticException.class, ()-> {
+            math.division(firstNumber, secondNumber);
+        });
+    }
+
 }
