@@ -38,4 +38,21 @@ class SimpleMathTest {
         assertEquals(expected, actual, () -> firstNumber + "/" + secondNumber +
                 "did not produce" + expected + "!");
     }
+    @Test
+    void testMultiplicacao(){
+        SimpleMath math = new SimpleMath();
+        double firstNumber = 4D;
+        double seconNumber = 8D;
+
+        Double actual = math.multiplication(firstNumber, seconNumber);
+        double expected = 32D;
+
+        //importante lembrar que
+        // o lambda so vai ser executado,
+        // se algo la na minha classe estiver errado
+
+        assertEquals(expected, actual, () -> firstNumber + "*" + seconNumber +
+                " did not producer" + expected + "!");
+
+    }
 }
