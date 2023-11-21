@@ -6,8 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Tests" />
+        <module name="automatedTest" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="automated-tests-with-java-erudio" target="19" />
+      <module name="Tests" target="20" />
+    </bytecodeTargetLevel>
   </component>
 </project>
