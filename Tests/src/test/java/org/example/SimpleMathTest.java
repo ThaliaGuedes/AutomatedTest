@@ -55,4 +55,18 @@ class SimpleMathTest {
                 " did not producer" + expected + "!");
 
     }
+
+    @Test
+    void testMedia (){
+        SimpleMath math = new SimpleMath();
+        double firstNumber = 8.5D;
+        double secondNumber = 4D;
+
+        Double actual = math.mean(firstNumber, secondNumber);
+        double expected = 6.25D;
+
+        assertEquals(expected, actual, () -> "("
+                + firstNumber + "+" + secondNumber + ")/2"
+                + "did not producer");
+    }
 }
